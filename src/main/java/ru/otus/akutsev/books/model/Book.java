@@ -4,14 +4,9 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "books")
-@NamedEntityGraph(name = "books-entity-graph", attributeNodes = {
-		@NamedAttributeNode("author"),
-		@NamedAttributeNode("genre")
-})
 public class Book {
 
 	@Id
